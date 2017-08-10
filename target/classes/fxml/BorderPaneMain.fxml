@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.hangman.controllers.MainController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Plik">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#closeApp" text="Zamknij" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Dodaj">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#addWordToData" text="Dodaj słowo" />
+                  <MenuItem mnemonicParsing="false" onAction="#addWordsFromFile" text="Dodaj słowa z pliku" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Pomoc">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#showInfo" text="O aplikacji" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+  <center>
+    <HBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+      <fx:include fx:id="game" source="Game.fxml" />
+    </HBox>
+  </center>
+</BorderPane>
